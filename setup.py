@@ -14,12 +14,13 @@ If you use this package, please cite the original SpatialDE publication.
 
 setup(
     name='SpatialDE-SO',
-    version='1.1.4',
+    version='1.1.5',
     description='Spatial and Temporal DE test. This is a fork containing some bug fixes.',
     long_description=ld,
     long_description_content_type='text/markdown',
     url='https://github.com/Mena-SA-Kamel/SpatialDE-SO',
-    packages=find_packages(),
+    package_dir={'': 'Python-module'},
+    packages=find_packages(where='Python-module', include=["SpatialDE", "SpatialDE.*"]),
     include_package_data=True,
     install_requires=[
         'numpy', 'scipy >= 1.0', 'pandas>=0.23', 'tqdm',
@@ -30,7 +31,7 @@ setup(
     ),
     author='Valentine Svensson',
     author_email='valentine@nxn.se',
-    mantainer='Mena Kamel',
-    mantainer_email='mena.kamel@sanofi.com',
+    maintainer='Mena Kamel',
+    maintainer_email='mena.kamel@sanofi.com',
     license='MIT',
 )
